@@ -42,7 +42,6 @@ void setup() {
   pinMode(buzzer, OUTPUT);
   pinMode(fanPin, OUTPUT);
   pinMode(warningLamp, OUTPUT);
-  pinMode(2, INPUT_PULLUP);
 
   myServo.attach(9);
 
@@ -78,7 +77,6 @@ void loop() {
   //Print getTemp and getTime in the Serial Monitor for debugging
   Serial.println(getTemp());
   Serial.println(getTime());
-  Serial.println(digitalRead(2));
 
   //If temperature is too low, beep and flash the warning lamp
   if (getTemp() < coldThresh) {
